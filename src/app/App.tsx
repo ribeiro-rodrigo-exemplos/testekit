@@ -8,6 +8,8 @@ import Menu from './views/components/menu/Menu'
 import Submenu from './views/components/menu/Submenu'
 import MenuItem from './views/components/menu/MenuItem'
 
+import AppRouter from './views/components/router/Router'
+
 
 function App() {
   return (
@@ -38,8 +40,7 @@ function App() {
                 </Submenu>
             </Menu>
         </Sidebar>
-
-        <div id="content"></div>
+        <AppRouter/> 
     </div>
   );
 }
