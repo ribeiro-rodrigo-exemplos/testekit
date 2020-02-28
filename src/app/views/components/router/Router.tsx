@@ -2,9 +2,9 @@ import React, { ReactNode } from 'react'
 
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 
-import BucketsPage from '../../pages/Buckets'
-import MachinesPage from '../../pages/Machines'
-import OrganizationsPage from '../../pages/Organizations'
+import BucketsPage from '../../pages/buckets/Buckets'
+import MachinesPage from '../../pages/machines/Machines'
+import OrganizationsPage from '../../pages/organizations/Organizations'
 
 interface RouterProps{
     children: ReactNode
