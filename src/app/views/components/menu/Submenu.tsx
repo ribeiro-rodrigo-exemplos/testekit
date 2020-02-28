@@ -8,15 +8,13 @@ interface SubmenuProps{
 
 export default ({ title, children, expanded }: SubmenuProps) => {
 
-    const [ex, changeExpand] = useState(expanded)
-
-    console.log(ex)
+    const [isExpanded, changeExpand] = useState(expanded)
 
     return (
         <li className="active">
-            <a href={`${title}Submenu`} data-toggle="collapse" aria-expanded={ex} 
-            className={`dropdown-toggle ${!ex ? 'collapssed' : ''}`} onClick={() => changeExpand(!ex)} >{ title }</a>
-            <ul className={`list-unstyled collapse ${ex ? 'show' : ''}`} id={`${title}Submenu`}>
+            <a href={`${title}Submenu`} data-toggle="collapse" aria-expanded={isExpanded} 
+            className={`dropdown-toggle ${!isExpanded ? 'collapssed' : ''}`} onClick={() => changeExpand(!isExpanded)} >{ title }</a>
+            <ul className={`list-unstyled collapse ${isExpanded ? 'show' : ''}`} id={`${title}Submenu`}>
                 { children }
             </ul>
         </li>
